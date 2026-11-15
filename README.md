@@ -32,7 +32,7 @@ diprediksi (kuota tertulis ~30 jam/minggu, RAM 29 GB).
 ## Alur drama
 
 1. **Naskah dulu.** 1 episode = 6 scene, tiap scene 5 detik.
-   Contoh lengkap: [`prompts/episode-01-balas-dendam.md`](prompts/episode-01-balas-dendam.md).
+   Contoh lengkap: [`prompts/mamang-ai/episode-01-balas-dendam.md`](prompts/mamang-ai/episode-01-balas-dendam.md).
 2. **Kunci karakter.** Bikin 1 foto referensi karakter, lalu semua scene pakai
    **image-to-video** dari foto itu. Jangan text-to-video terus — mukanya ganti-ganti.
 3. **Render per scene di Colab**, download sebelum sesi habis.
@@ -62,7 +62,7 @@ sisanya sudah tersimpan.
 
 ### 3. Generate di Gradio
 1. Pilih model **Wan 2.2 TI2V-5B FastWan**, **480p**, **5 detik**.
-2. Prompt + gambar referensi dari `prompts/episode-01-balas-dendam.md`.
+2. Prompt + gambar referensi dari `prompts/mamang-ai/episode-01-balas-dendam.md`.
 3. Render **1 scene dulu** untuk tes, baru batch 6 scene dalam sesi yang sama.
 4. Download hasil sebelum sesi putus. Colab putus kalau idle ~90 menit,
    dan sesi maks 12 jam.
@@ -74,7 +74,9 @@ sisanya sudah tersimpan.
 ├── README.md
 ├── wan2gp_colab.ipynb            # notebook utama — upload ke Colab
 ├── prompts/
-│   └── episode-01-balas-dendam.md # naskah 6 scene siap copy-paste
+│   └── mamang-ai/
+│       ├── episode-01-balas-dendam.md
+│       └── episode-02-pernikahan-palsu.md
 ├── scripts/
 │   └── cek_gpu.py                 # cek GPU + torch
 ├── LICENSE                        # Apache-2.0
